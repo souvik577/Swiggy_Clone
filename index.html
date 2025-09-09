@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FirstBite 🍴 - Food Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="header-flex">
+        <h1 class="site-title">FirstBite 🍴</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#featured">Featured</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="categories">
+        <h2>Food Categories</h2>
+        <div class="category-list">
+            <button class="category-btn" data-category="all">All</button>
+            <button class="category-btn" data-category="pizza">Pizza</button>
+            <button class="category-btn" data-category="burger">Burger</button>
+            <button class="category-btn" data-category="dessert">Dessert</button>
+        </div>
+    </section>
+    <section id="featured">
+        <h2>Featured Dishes</h2>
+        <p class="featured-intro">Discover our chef's handpicked favorites! Enjoy the best flavors, top-rated dishes, and unique creations that everyone loves. Click any dish to see more details!</p>
+        <div class="dishes">
+            <!-- Dishes will be rendered here by JS -->
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p>Email: info@deliciouseats.com</p>
+    </section>
+    <!-- <div class="order-btn-container">
+        <button class="order-btn" onclick="document.getElementById('order').scrollIntoView({behavior: 'smooth'});">Order Food</button>
+    </div> -->
+    <section id="order">
+        <h2>Order Food</h2>
+        <form class="order-form">
+            <label for="dish">Select Dish:</label>
+            <select id="dish" name="dish" required>
+                <option value="">-- Choose a dish --</option>
+                <option value="Margherita Pizza">Margherita Pizza</option>
+                <option value="Cheeseburger">Cheeseburger</option>
+                <option value="Chocolate Cake">Chocolate Cake</option>
+                <option value="Pepperoni Pizza">Pepperoni Pizza</option>
+                <option value="Veggie Burger">Veggie Burger</option>
+                <option value="Tiramisu">Tiramisu</option>
+            </select>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+            <label for="order-name">Name:</label>
+            <input type="text" id="order-name" name="order-name" required>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required pattern="[0-9\-\+\s]{7,15}">
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Delicious Eats</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
